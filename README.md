@@ -17,7 +17,7 @@ The project aims to:
   <li>Create a user</li>
   <li>Set up OpenVPN Connect and profile</li>
 </ul>
-  <img src="" alt="OpenVPN">
+  <img src="AWS VPN/VPN architechture.jpg" alt="OpenVPN">
 
 <h2>Stage 1: Create EC2 Instance</h2>
 <p><br><br>
