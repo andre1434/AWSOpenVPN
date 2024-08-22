@@ -76,3 +76,5 @@ I used ping to test if client is able to communicate with the Private Subnet.<br
 <img src="AWS VPN/test without connection.jpg" alt="Test without VPN">
 <b>With VPN Connection</b>
 <img src="AWS VPN/test with connection.jpg" alt="Test without VPN">
+
+<p align="center"><b>==END OF DOCUMENTATION==</b></p>
