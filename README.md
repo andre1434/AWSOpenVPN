@@ -39,12 +39,14 @@ Connect to VPN Server. There are a few options to connect to the instance, for t
   Open powershell. Directory should be where the private key (.PEM) file is located.<br>
   Run Command <b> chmod 400 "VPNServer.pem"</b><br>
   
-  SSH sample command can be used: <b>ssh -i "VPNServer.pem" root@ec2-35-90-14-50.us-west-2.compute.amazonaws.com</b>
-  Edit the SSH command to <b>ssh -i "VPNServer.pem" openvpnas@ec2-35-90-14-50.us-west-2.compute.amazonaws.com</b> to login as openvpnas.<br>
+  SSH sample command can be used: <b>ssh -i "VPNServer.pem" root@54.200.137.25</b>
+  Edit the SSH command to <b>ssh -i "VPNServer.pem" openvpnas@@54.200.137.25</b> to login as openvpnas.<br>
   Configure as needed. Setup password of openvpn user.
   <img src="AWS VPN/login as openvpnas.jpg" alt="SSH Connection for Configuration login as openvpnas">
 
   Admin page can be accessed through WebUI. Link to Admin WebUI page can be checked after initial configuration.<br>
+  <img src="AWS VPN/Initial Configuration end.jpg" alt="End Of Initial Configuration">
+  
   Credentials to be used as per initial configuration.
   <img src="AWS VPN/admin login page.jpg" alt="OpenVPN Admin Page">
 
