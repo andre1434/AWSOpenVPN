@@ -16,7 +16,7 @@ The project aims to:
   <li>Setup VPC with at least 1 private subnet</li>
   <li>Create an EC2 instance with OpenVPN AMI</li>
   <li>Configure VPN Server</li>
-  <li>Set up OpenVPN Connect and profile</li>
+  <li>Set up OpenVPN Connect</li>
   <li>Update Private Subnet to allow ICMP traffic coming from VPN server</li>
   <lI>Test connection to a Private Subnet using ping</lI>
 </ul>
@@ -45,12 +45,33 @@ Connect to VPN Server. There are a few options to connect to the instance, for t
   Configure as needed. Setup password of openvpn user.
   <img src="AWS VPN/login as openvpnas.jpg" alt="SSH Connection for Configuration login as openvpnas">
 
-  Admin page can be accessed through WebUI. LINK https://35.90.14.50:943/admin/ can be checked after initial configuration.<br>
+  Admin page can be accessed through WebUI. Link to Admin WebUI page can be checked after initial configuration.<br>
   Credentials to be used as per initial configuration.
   <img src="AWS VPN/admin login page.jpg" alt="OpenVPN Admin Page">
 
 Edit VPN settings. Under Routing, enable "Should client internet traffic be routed through the VPN?"<br>
 Save Settings. Then Update Running Server to update.
-  <img src="AWS VPN/vpn settings.jpg" alt="OpenVPN Admin Page">
+  <img src="AWS VPN/vpn settings.jpg" alt="OpenVPN Admin Settings Page">
   
-  
+<h2>Stage 4: Set up OpenVPN Connect</h2>
+Link to the OpenVPN client page can be checked after initial configuration. Credentials of user open<br>
+Download the client based on the Operating System. Install.
+  <img src="AWS VPN/client page.jpg" alt="OpenVPN Client Page">
+  <br><br>
+  Once installed, import the profile if needed.<br>
+  Test if VPN can connect.
+  <img src="AWS VPN/connect openvpn.jpg" alt="VPN Connection">
+  Test if VPN works. This can be done by searching <b>What is my IP address</b> on Google.
+  <img src="AWS VPN/whatismyip.jpg" alt="What is my IP Address">
+
+<h2>Stage 5: Update Private Subnet to allow ICMP traffic coming from VPN server</h2>
+For the purposes of this project, I only allowed ICMP traffic to check if I am able to ping my private server when I'm connected to the VPN.
+<br>Edit Private Security group. Allow ICMP traffic with source VPN.
+<img src="AWS VPN/edit private subnet sec group inbound rule.jpg" alt="Security Group inbound rule">
+
+<h2>Stage 6: Test connection to a Private Subnet using ping</h2>
+I used ping to test if client is able to communicate with the Private Subnet.<br>
+<b>Without VPN Connection</b>
+<img src="AWS VPN/test without connection.jpg" alt="Test without VPN">
+<b>With VPN Connection</b>
+<img src="AWS VPN/test with connection.jpg" alt="Test without VPN">
