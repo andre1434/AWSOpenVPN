@@ -1,4 +1,3 @@
-==Under Construction==
 <h1>Setup VPN server in the AWS Cloud and connect to a Private Subnet</h1>
 
 This repository contains a walkthrough in setting up a VPN server in the cloud and configured to be able to connect to a private subnet.
